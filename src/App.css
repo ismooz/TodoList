@@ -1,38 +1,80 @@
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 50%;
+  margin: auto;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-ajouter, .input, .todo-item {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Ajouté */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-ajouter {
+  color: #000;
+  background-color:  #61dafb77;
+  border: solid 1px #282c34;
+  margin-top: 1rem;
+  transition: ease-in-out 200ms;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button-ajouter:hover {
+  background-color: #56bfdb;
+}
+
+.input {
+  border: solid 1px #d8d8d8;
+}
+
+input:focus-visible {
+  border: solid 1px #d8d8d8;
+  box-shadow: inset 0 0 3px #61dafb;
+  border-radius: 0px;
+  outline: none;
+}
+
+ul {
+  padding-left: 0;
+  width: 100%;
+}
+
+.task-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-input {
+  padding: 2rem;
+  border-radius: 5px;
+  border: solid 1px #d8d8d8;
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: solid 1px #d8d8d8;
+}
+
+.item-text {
+  font-size: large;
+  flex-grow: 1; 
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
